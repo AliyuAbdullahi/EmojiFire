@@ -53,7 +53,7 @@ dependencies {
 
 }
 
-task stage(dependsOn: ['installDist'])
+task stage(dependsOn: ['jar', 'installDist'])
 
 jar {
     manifest {
