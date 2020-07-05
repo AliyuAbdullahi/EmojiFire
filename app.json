@@ -1,0 +1,6 @@
+{
+  "name": "Start on Heroku: Kotlin",
+  "description": "A barebones Kotlin app for emojis.",
+  "image": "heroku/java",
+  "addons": [ "heroku-postgresql" ]
+}
