@@ -19,6 +19,8 @@ apply plugin: 'com.github.johnrengelman.shadow'
 
 
 shadowJar {
+    classifier(null)
+    version(null)
     manifest {
         attributes 'Main-Class': mainClassName
     }
@@ -55,15 +57,3 @@ dependencies {
 }
 
 task stage(dependsOn: ['shadowJar', 'installDist'])
-
-jar {
-    manifest {
-        attributes 'Main-Class': mainClassName
-    }
-
-    from {
-        (configurations.compile).collect {
-            it.isDirectory() ? it : zipTree(it)
-        }
-    }
-}

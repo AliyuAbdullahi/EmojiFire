@@ -49,6 +49,7 @@ fun Application.module(testing: Boolean = false) {
             setPrettyPrinting()
         }
     }
+
     DatabaseFactory.init()
 
     val db = EmojiPhraseRepository()
